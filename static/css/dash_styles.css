@@ -1,0 +1,477 @@
+/* Mobile-first and responsive styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3b82f6;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    padding: 15px;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+ul#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#logoutBtn {
+    position: absolute;
+    top: 10px !important;
+    right: 10px !important;
+    background: none;
+    border: none;
+    padding-top: 5px !important;
+}
+
+.taskCard {
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    animation: none;
+}
+
+.taskCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.taskCard h3 {
+    margin-top: 0;
+    color: #3b82f6;
+    font-size: 18px;
+}
+
+.taskDetails p {
+    margin: 5px 0;
+}
+
+.taskDetails p strong {
+    color: #6b7280;
+}
+
+.taskActions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.taskActions button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.taskActions button.editBtn {
+    background-color: #f59e0b;
+    color: #fff;
+}
+
+.taskActions button.deleteBtn {
+    background-color: #ef4444;
+    color: #fff;
+}
+
+.taskActions button.doneBtn {
+    background-color: #10b981;
+    color: #fff;
+}
+
+/* Add New Task Form Styling */
+#addTaskForm {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+#addTaskForm form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+#addTaskForm label {
+    font-weight: bold;
+    color: #4b5563;
+}
+
+#addTaskForm input[type="text"],
+#addTaskForm select,
+#addTaskForm input[type="date"],
+#addTaskForm input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #4b5563;
+}
+
+#addTaskForm button[type="submit"] {
+    padding: 12px 20px;
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#addTaskForm button[type="submit"]:hover {
+    background-color: #2563eb;
+}
+
+/* Edit Form Styling */
+.editForm {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: none;
+    max-width: 100%;
+}
+
+.editForm form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+.editForm label {
+    font-weight: bold;
+    color: #4b5563;
+}
+
+.editForm input[type="text"],
+.editForm select,
+.editForm input[type="date"],
+.editForm input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #4b5563;
+}
+
+.editForm button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.editForm button.cancelBtn {
+    background-color: #ef4444;
+    color: #fff;
+}
+
+.editForm button.updateBtn {
+    background-color: #10b981;
+    color: #fff;
+}
+
+.editForm button.cancelBtn:hover {
+    background-color: rgb(95, 6, 6);
+}
+
+.editForm button.updateBtn:hover {
+    background-color: rgb(6, 95, 70);
+}
+
+/* Overall Styling and Hover Effects */
+li.taskCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Filters and Search Styling */
+#filterSearchContainer {
+    padding: 10px;
+}
+
+.filtersContainer {
+    grid-template-columns: 1fr;
+}
+
+.filtersContainer select {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.searchContainer {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.searchContainer input[type="search"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    #logoutBtn {
+        top: 5px;
+        right: 5px;
+        padding-top: 3px;
+    }
+
+    .taskActions {
+        justify-content: flex-start;
+    }
+
+    .taskActions button {
+        margin-right: 10px;
+    }
+
+    #addTaskForm,
+    .editForm {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .filtersContainer {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .filtersContainer:last-child {
+        justify-content: center;
+    }
+
+    /* Make the search bar and button align on the same row */
+    .searchContainer {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* Adjust the width of the search input to fit in the remaining space */
+    .searchContainer input[type="search"] {
+        margin-bottom: 0;
+    }
+
+    /* Add some space between the search input and button */
+    .searchContainer button {
+        margin-left: 10px;
+    }
+}
+
+/* Additional styles for filters and search bar */
+#filterSearchContainer {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#filterSearchContainer h2 {
+    margin-bottom: 10px;
+}
+
+.filtersContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.filtersContainer label {
+    font-weight: bold;
+    color: #4b5563;
+    display: block;
+}
+
+.filtersContainer select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #4b5563;
+    display: block;
+    margin-top: 5px;
+}
+
+.searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.searchContainer input[type="search"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #4b5563;
+}
+
+.searchContainer button {
+    padding: 12px 20px;
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+.searchContainer button:hover {
+    background-color: #2563eb;
+}
+
+/* Add animations for user feedback */
+.taskCard {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.taskCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Add animation to show/hide the edit form */
+.editForm {
+    transition: display 0.3s;
+}
+
+.editForm.show {
+    display: block;
+}
+
+/* Add animation to task list items */
+.taskCard {
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.completedTask .taskDetails p:last-of-type b {
+    color: #059669;
+}
+
+.incompletedTask .taskDetails p:last-of-type b {
+    color: #ef4444;
+}
+
+.completedTask {
+    background-color: #c6f6d5;
+    animation: completedAnimation 0.3s ease;
+}
+
+.completedTask h3 {
+    color: #059669;
+}
+
+.incompletedTask {
+    background-color: #fff;
+    animation: incompletedAnimation 0.3s ease;
+}
+
+.incompletedTask h3 {
+    color: #3b82f6;
+}
+
+/* Animation for completed tasks */
+@keyframes completedAnimation {
+    0% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(1.1);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes incompletedAnimation {
+    0% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(1.1);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
