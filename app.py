@@ -347,9 +347,9 @@ def delete_task(task_id):
 
     return jsonify(message="Task deleted successfully")
 
+if "database.db" not in os.listdir():
+        init_db()
 
 # Start the Flask app
 if __name__ == "__main__":
-    if "database.db" not in os.listdir():
-        init_db()
     app.run(host="0.0.0.0", port=5000, debug=True)
